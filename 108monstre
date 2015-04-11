@@ -20,16 +20,16 @@ if (a < 2):
 try:
     a = float(a)
 except:
-    print "Le premier argument (a) doit etre un nombre."
+    print ("Le premier argument (a) doit etre un nombre.")
 
 try:
     nmax = float(sys.argv[2])
 except:
-    print "Le deuxieme argument (nmax) doit etre un nombre."
+    print ("Le deuxieme argument (nmax) doit etre un nombre.")
 
 try:
     while (i <= 2) :
-        while k <= nmax :
+        while (k <= nmax) :
             tmp = (tmp + ((math.cos(((a ** k)) * (math.pi) * i)) / (2 ** k)))
             k = k + 1
         x.append(i)
@@ -38,13 +38,13 @@ try:
         k = float(0)
         i = i + 0.001
 except:
-    sys.exit(" ")
+    sys.exit("Nombre(s) trop grand(s).")
 
 try:
     plt.plot(x,y, 'g-')
-    plt.title("108Monstre", fontsize = 20, )
+    plt.title("108Monstre", fontsize = 20)
     plt.xlabel("x", fontsize = 16, color = 'red')
     plt.ylabel("y", fontsize = 16, color = 'red')
     plt.show()
 except:
-    print "Can not display."
+    print ("Can not display.")
